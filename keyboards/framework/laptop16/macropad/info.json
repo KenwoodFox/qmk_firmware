@@ -15,7 +15,7 @@
     "processor": "RP2040",
     "url": "https://frame.work/de/en/products/laptop16-diy-amd-7040",
     "usb": {
-        "device_version": "0.2.2",
+        "device_version": "3.0.0",
         "pid": "0x0013",
         "vid": "0x32AC",
         "force_nkro": true
