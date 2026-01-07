@@ -20,7 +20,7 @@ enum custom_keycodes {
 
 // My defs/settings definition
 // #define CLEAR_EEPROM_ON_BOOT
-#define MIN_BRIGHTNESS 3
+#define MIN_BRIGHTNESS 4
 #define RGB_LIGHT_BLUE 100, 100, 255
 
 // Helper function to set RGB color scaled by current brightness
@@ -43,7 +43,7 @@ void keyboard_post_init_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(   // Numpad
         TO(0),         TO(1),         TO(2),             TO(3),
-        RGB_VAI,       KC_KP_SLASH,   KC_KP_ASTERISK,    KC_KP_MINUS,
+        KC_PRINT_SCREEN,       KC_KP_SLASH,   KC_KP_ASTERISK,    KC_KP_MINUS,
         KC_KP_7,       KC_KP_8,       KC_KP_9,           KC_KP_PLUS,
         KC_KP_4,       KC_KP_5,       KC_KP_6,           KC_PERCENT,
         KC_KP_1,       KC_KP_2,       KC_KP_3,           KC_KP_EQUAL,
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [1] = LAYOUT(   // Nav
         _______,       _______,       _______,            _______,
-        KC_PRINT_SCREEN,       _______,     KC_VOLD,     KC_VOLU,
+        XXXXXXX,       _______,       KC_VOLD,            KC_VOLU,
         XXXXXXX,       XXXXXXX,       XXXXXXX,            XXXXXXX,
         KC_HOME,       KC_PGUP,       KC_PGDN,            KC_END,
         XXXXXXX,       KC_UP,         XXXXXXX,            XXXXXXX,
