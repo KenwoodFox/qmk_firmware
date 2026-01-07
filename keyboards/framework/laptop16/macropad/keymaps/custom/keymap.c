@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [1] = LAYOUT(   // Nav
         _______,       _______,       _______,            _______,
-        XXXXXXX,       _______,       KC_VOLD,            KC_VOLU,
+        _______,       _______,       KC_VOLD,            KC_VOLU,
         XXXXXXX,       XXXXXXX,       XXXXXXX,            XXXXXXX,
         KC_HOME,       KC_PGUP,       KC_PGDN,            KC_END,
         XXXXXXX,       KC_UP,         XXXXXXX,            XXXXXXX,
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [2] = LAYOUT(   // Document/Chat
         _______,       _______,       _______,            _______,
-        C(KC_B),       C(KC_I),       C(KC_U),            LSA(KC_5),
+        _______,       C(KC_I),       C(KC_U),            LSA(KC_5),
         RCS(KC_L),     RCS(KC_E),     RCS(KC_R),          WORDCOUNT,
         LCA(KC_4),     LCA(KC_5),     XXXXXXX,            RCS(KC_8),
         LCA(KC_1),     LCA(KC_2),     LCA(KC_3),          RCS(KC_7),
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [3] = LAYOUT(   // Special
         _______,       _______,       _______,            _______,
-        RGB_VAI,       XXXXXXX,       XXXXXXX,            XXXXXXX,
+        _______,       XXXXXXX,       XXXXXXX,            XXXXXXX,
         XXXXXXX,       XXXXXXX,       RGB_VAD,            RGB_VAI,
         XXXXXXX,       XXXXXXX,       XXXXXXX,            XXXXXXX,
         QK_BOOT,       XXXXXXX,       XXXXXXX,            XXXXXXX,
@@ -168,13 +168,13 @@ bool rgb_matrix_indicators_user(void) {
     }
     if (layer_state_cmp(layer_state, 2)) {
         // Document/Chat 
-        rgb_matrix_set_color_scaled(4,  RGB_BLUE);    // Bold      C1 R2
-        rgb_matrix_set_color_scaled(7,  RGB_TEAL);    // Left	    C1 R3
+        rgb_matrix_set_color_scaled(4,  RGB_WHITE);   //           C1 R2
+        rgb_matrix_set_color_scaled(7,  RGB_TEAL);    // Left      C1 R3
         rgb_matrix_set_color_scaled(6,  RGB_BLUE);    // Head 4    C1 R4
         rgb_matrix_set_color_scaled(9,  RGB_BLUE);    // Head 1    C1 R5
-        rgb_matrix_set_color_scaled(0,  RGB_BLUE);    // italic    C2 R2
-        rgb_matrix_set_color_scaled(1,  RGB_TEAL);    // Center 	C2 R3
-        rgb_matrix_set_color_scaled(3,  RGB_BLUE);    // Head 5 	C2 R4
+        rgb_matrix_set_color_scaled(0,  RGB_BLUE);    // Italics   C2 R2
+        rgb_matrix_set_color_scaled(1,  RGB_TEAL);    // Center    C2 R3
+        rgb_matrix_set_color_scaled(3,  RGB_BLUE);    // Head 5    C2 R4
         rgb_matrix_set_color_scaled(11, RGB_BLUE);    // Head 2	C2 R5
         rgb_matrix_set_color_scaled(8,  RGB_BLACK);   // None	    C1 R6
         rgb_matrix_set_color_scaled(20, RGB_BLUE);    // U Line	C3 R2
